@@ -1,1 +1,1 @@
-prompt kylewest
+prompt steeef_simplified 
