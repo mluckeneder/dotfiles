@@ -18,7 +18,8 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
-
+set cursorline
+set nolist
 set encoding=utf-8
 
 " This makes vim act like all other editors, buffers can
@@ -65,14 +66,13 @@ set smarttab
 set shiftwidth=2
 set softtabstop=2
 set tabstop=2
-set expandtab
+set noexpandtab
 
 filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
-set list listchars=tab:\ \ ,trail:·
-
+"set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
