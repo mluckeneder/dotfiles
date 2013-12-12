@@ -10,26 +10,22 @@ alias ylv='yadr vim-list-plugin'
 alias yup='yadr update-plugins'
 alias yip='yadr init-plugins'
 
-# PS
-alias psa="ps aux"
-alias psg="ps aux | grep "
-alias psr='ps aux | grep ruby'
 
 # Moving around
 alias cdb='cd -'
 
 # Show human friendly numbers and colors
-alias df='df -h'
-alias ll='ls -alGh'
-alias ls='ls -Gh --color'
-alias du='du -h -d 2'
+if [[ $OSTYPE == darwin* ]]; then
+    alias ls='ls -Gh'
+else
+    alias ls='ls -Gh --color'
+fi
 
 # show me files matching "ls grep"
-alias lsg='ll | grep'
 
 # Alias Editing
-alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
-alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
+#alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
+#alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 
 # vim using
 mvim --version > /dev/null 2>&1
@@ -39,79 +35,78 @@ if [ $MACVIM_INSTALLED -eq 0 ]; then
 fi
 
 # vimrc editing
-alias ve='vim ~/.vimrc'
+#alias ve='vim ~/.vimrc'
 
 # zsh profile editing
 alias ze='vim ~/.zshrc'
 alias zr='source ~/.zshrc'
 
 # Git Aliases
-#lias gs='git status'
-#lias gstsh='git stash'
-#lias gst='git stash'
-#lias gsp='git stash pop'
-#lias gsa='git stash apply'
-#lias gsh='git show'
-#lias gshw='git show'
-#lias gshow='git show'
-#lias gi='vim .gitignore'
-#lias gcm='git ci -m'
-#lias gcim='git ci -m'
-#lias gci='git ci'
-#lias gco='git co'
-#lias gcp='git cp'
-#lias ga='git add -A'
-#lias guns='git unstage'
-#lias gunc='git uncommit'
-#lias gm='git merge'
-#lias gms='git merge --squash'
-#lias gam='git amend --reset-author'
-#lias grv='git remote -v'
-#lias grr='git remote rm'
-#lias grad='git remote add'
-#lias gr='git rebase'
-#lias gra='git rebase --abort'
-#lias ggrc='git rebase --continue'
-#lias gbi='git rebase --interactive'
-#lias gl='git l'
-#lias glg='git l'
-#lias glog='git l'
-#lias co='git co'
-#lias gf='git fetch'
-#lias gfch='git fetch'
-#lias gd='git diff'
-#lias gb='git b'
-#lias gbd='git b -D -w'
-#lias gdc='git diff --cached -w'
-#lias gpub='grb publish'
-#lias gtr='grb track'
-#lias gpl='git pull'
-#lias gplr='git pull --rebase'
-#lias gps='git push'
-#lias gpsh='git push'
-#lias gnb='git nb' # new branch aka checkout -b
-#lias grs='git reset'
-#lias grsh='git reset --hard'
-#lias gcln='git clean'
-#lias gclndf='git clean -df'
-#lias gclndfx='git clean -dfx'
-#lias gsm='git submodule'
-#lias gsmi='git submodule init'
-#lias gsmu='git submodule update'
-#lias gt='git t'
-#lias gbg='git bisect good'
-#lias gbb='git bisect bad'
+#alias gs='git status'
+#alias gstsh='git stash'
+#alias gst='git stash'
+#alias gsp='git stash pop'
+#alias gsa='git stash apply'
+#alias gsh='git show'
+#alias gshw='git show'
+#alias gshow='git show'
+#alias gi='vim .gitignore'
+#alias gcm='git ci -m'
+#alias gcim='git ci -m'
+#alias gci='git ci'
+#alias gco='git co'
+#alias gcp='git cp'
+#alias ga='git add -A'
+#alias guns='git unstage'
+#alias gunc='git uncommit'
+#alias gm='git merge'
+#alias gms='git merge --squash'
+#alias gam='git amend --reset-author'
+#alias grv='git remote -v'
+#alias grr='git remote rm'
+#alias grad='git remote add'
+#alias gr='git rebase'
+#alias gra='git rebase --abort'
+#alias ggrc='git rebase --continue'
+#alias gbi='git rebase --interactive'
+#alias gl='git l'
+#alias glg='git l'
+#alias glog='git l'
+#alias co='git co'
+#alias gf='git fetch'
+#alias gfch='git fetch'
+#alias gd='git diff'
+#alias gb='git b'
+#alias gbd='git b -D -w'
+#alias gdc='git diff --cached -w'
+#alias gpub='grb publish'
+#alias gtr='grb track'
+#alias gpl='git pull'
+#alias gplr='git pull --rebase'
+#alias gps='git push'
+#alias gpsh='git push'
+#alias gnb='git nb' # new branch aka checkout -b
+#alias grs='git reset'
+#alias grsh='git reset --hard'
+#alias gcln='git clean'
+#alias gclndf='git clean -df'
+#alias gclndfx='git clean -dfx'
+#alias gsm='git submodule'
+#alias gsmi='git submodule init'
+#alias gsmu='git submodule update'
+#alias gt='git t'
+#alias gbg='git bisect good'
+#alias gbb='git bisect bad'
 
 # Common shell functions
-#lias less='less -r'
-#lias tf='tail -f'
-#lias l='less'
-#lias lh='ls -alt | head' # see the last modified files
-#lias screen='TERM=screen screen'
-#lias cl='clear'
-
+#alias less='less -r'
+#alias tf='tail -f'
+#alias l='less'
+#alias lh='ls -alt | head' # see the last modified files
+#alias screen='TERM=screen screen'
+#alias cl='clear'
 # Zippin
-#lias gz='tar -zcvf'
+#alias gz='tar -zcvf'
 
 # Ruby
 #lias c='rails c' # Rails 3
