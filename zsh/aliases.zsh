@@ -3,16 +3,7 @@
 # Don't change. The following determines where YADR is installed.
 yadr=$HOME/.yadr
 
-# YADR support
-alias yav='yadr vim-add-plugin'
-alias ydv='yadr vim-delete-plugin'
-alias ylv='yadr vim-list-plugin'
-alias yup='yadr update-plugins'
-alias yip='yadr init-plugins'
 
-
-# Moving around
-alias cdb='cd -'
 
 # Show human friendly numbers and colors
 if [[ $OSTYPE == darwin* ]]; then
@@ -21,11 +12,9 @@ else
     alias ls='ls -Gh --color'
 fi
 
-# show me files matching "ls grep"
+
 
 # Alias Editing
-#alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
-#alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 
 # vim using
 mvim --version > /dev/null 2>&1
