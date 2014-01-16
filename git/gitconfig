@@ -15,3 +15,7 @@
   path = .gitconfig.user
 [merge]
 	log = false
+[core]
+	excludesfile = /nail/home/mluck/.gitignore_global
+[apply]
+	whitespace = nowarn
